@@ -9,28 +9,56 @@
 ---
 
 ## Table of Contents
-1. [Executive Summary](#1-executive-summary)
-2. [Problem Statement](#2-problem-statement)
-3. [Vision & Mission](#3-vision--mission)
-4. [Target Audience](#4-target-audience)
-5. [Core Features](#5-core-features)
-6. [Functional Requirements](#6-functional-requirements)
-7. [Non-Functional Requirements](#7-non-functional-requirements)
-8. [Tech Stack](#8-tech-stack)
-9. [AI Architecture (AutoGen 0.4)](#9-ai-architecture-autogen-04)
-10. [Authentication & Authorization](#10-authentication--authorization)
-11. [Subscription & Business Model](#11-subscription--business-model)
-12. [Data Model Overview](#12-data-model-overview)
-13. [API Overview](#13-api-overview)
-14. [UI/UX Requirements](#14-uiux-requirements)
-15. [Scalability & Availability](#15-scalability--availability)
-16. [Security Considerations](#16-security-considerations)
-17. [Success Metrics](#17-success-metrics)
-18. [Release Plan](#18-release-plan)
+1. [Hackathon Theme Alignment](#1-hackathon-theme-alignment)
+2. [Executive Summary](#2-executive-summary)
+3. [Problem Statement](#3-problem-statement)
+4. [Vision & Mission](#4-vision--mission)
+5. [Target Audience](#5-target-audience)
+6. [Core Features](#6-core-features)
+7. [Functional Requirements](#7-functional-requirements)
+8. [Non-Functional Requirements](#8-non-functional-requirements)
+9. [Tech Stack](#9-tech-stack)
+10. [AI Architecture (AutoGen 0.4)](#10-ai-architecture-autogen-04)
+11. [Authentication & Authorization](#11-authentication--authorization)
+12. [Subscription & Business Model](#12-subscription--business-model)
+13. [Data Model Overview](#13-data-model-overview)
+14. [API Overview](#14-api-overview)
+15. [UI/UX Requirements](#15-uiux-requirements)
+16. [Scalability & Availability](#16-scalability--availability)
+17. [Security Considerations](#17-security-considerations)
+18. [Success Metrics](#18-success-metrics)
+19. [Release Plan](#19-release-plan)
 
 ---
 
-## 1. Executive Summary
+## 1. Hackathon Theme Alignment
+
+### Primary Theme: 🔥 Theme 1 – Reimagining Learning & Collaboration
+
+> *"In a world where teams are globally distributed and technology evolves faster than ever, how can we reinvent the way people learn, share knowledge, and collaborate?"*
+
+BothSidesOfACoin is fundamentally a **learning and collaboration platform** — it reimagines how people learn about the world by breaking echo chambers and fostering balanced information consumption through AI.
+
+#### Direct Alignment with Theme 1 Guiding Thoughts
+
+| Theme 1 Guiding Thought | How BothSidesOfACoin Addresses It |
+|--------------------------|-----------------------------------|
+| *"Make learning more personalized, on-demand, and embedded into daily work"* | The **Bias Detection Engine** personalizes each user's learning journey by tracking their reading patterns, computing a personal Bias Score, and recommending content they're missing — all embedded into daily news consumption. |
+| *"Help employees collaborate smarter, across roles, regions, and time zones"* | The platform bridges **ideological divides** — the hardest "regions" to collaborate across. By showing Left, Right, and Neutral perspectives side-by-side, it helps people understand viewpoints outside their own bubble, enabling more empathetic and informed collaboration. |
+| *"Foster a culture of curiosity, knowledge-sharing, and innovation through technology"* | **AI Debate Mode** is a direct curiosity engine — users engage with 3 AI personas arguing different perspectives, actively encouraging exploration of opposing viewpoints. The **Opinion Balancer Score** gamifies balanced reading with badges, turning curiosity into a habit. |
+| *"Digital tools turn information into insight, and collaboration into impact"* | Raw biased news (information) is transformed by AI agents into **balanced multi-perspective summaries** (insight). The 3-Side View, Timeline, and Impact Analyzer turn passive consumption into active critical thinking. |
+
+#### Why NOT Theme 2 (AI-Driven Software Excellence)?
+
+Theme 2 focuses on transforming the **software development lifecycle** — faster time to market, code quality, CI/CD automation, vulnerability detection, and reducing engineering toil. While BothSidesOfACoin is *built with* excellent software engineering practices and AI, its **purpose** is not about improving software development — it's about improving how people **learn, understand, and think** about the world around them.
+
+#### Pitch Alignment
+
+> *"We are not building another news app. We are building a learning system that helps people think, not just react — turning information into insight and diverse perspectives into collaborative understanding."*
+
+---
+
+## 2. Executive Summary
 
 **BothSidesOfACoin** is an AI-powered web application that combats algorithmic bias and echo chambers by presenting news and opinions from multiple perspectives — Left, Right, and Neutral — side-by-side. The platform uses a multi-agent AI system built on **Microsoft AutoGen 0.4** with **Ollama** (local LLM inference) to analyze, classify, summarize, and debate news content, empowering users to think critically rather than reactively.
 
@@ -45,7 +73,7 @@
 
 ---
 
-## 2. Problem Statement
+## 3. Problem Statement
 
 | Problem | Impact |
 |---------|--------|
@@ -59,7 +87,7 @@
 
 ---
 
-## 3. Vision & Mission
+## 4. Vision & Mission
 
 **Vision:** A world where every person has access to all sides of every story, enabling informed and empathetic decision-making.
 
@@ -67,7 +95,7 @@
 
 ---
 
-## 4. Target Audience
+## 5. Target Audience
 
 | Segment | Description | Pain Point |
 |---------|-------------|------------|
@@ -80,7 +108,7 @@
 
 ---
 
-## 5. Core Features
+## 6. Core Features
 
 ### 5.1 Three-Side View (Main USP)
 For any topic, display three simultaneous perspectives:
@@ -133,7 +161,7 @@ For any topic, display three simultaneous perspectives:
 
 ---
 
-## 6. Functional Requirements
+## 7. Functional Requirements
 
 ### FR-01: User Management
 | ID | Requirement | Priority |
@@ -196,7 +224,7 @@ For any topic, display three simultaneous perspectives:
 
 ---
 
-## 7. Non-Functional Requirements
+## 8. Non-Functional Requirements
 
 | Category | Requirement | Target |
 |----------|-------------|--------|
@@ -215,7 +243,7 @@ For any topic, display three simultaneous perspectives:
 
 ---
 
-## 8. Tech Stack
+## 9. Tech Stack
 
 ### Backend
 | Component | Technology | Justification |
@@ -254,7 +282,7 @@ For any topic, display three simultaneous perspectives:
 
 ---
 
-## 9. AI Architecture (AutoGen 0.4)
+## 10. AI Architecture (AutoGen 0.4)
 
 ### Design Principles
 1. **No hardcoded agent pipelines** — The orchestrator dynamically determines which agents to invoke
@@ -357,7 +385,7 @@ result = await team.run(task="Analyze the topic: 'AI Regulation in EU'")
 
 ---
 
-## 10. Authentication & Authorization
+## 11. Authentication & Authorization
 
 ### Authentication
 | Method | Details |
@@ -401,7 +429,7 @@ result = await team.run(task="Analyze the topic: 'AI Regulation in EU'")
 
 ---
 
-## 11. Subscription & Business Model
+## 12. Subscription & Business Model
 
 ### Tier Structure
 
@@ -439,7 +467,7 @@ result = await team.run(task="Analyze the topic: 'AI Regulation in EU'")
 
 ---
 
-## 12. Data Model Overview
+## 13. Data Model Overview
 
 ### Core Entities
 - **User** — account, profile, preferences, subscription
@@ -458,7 +486,7 @@ result = await team.run(task="Analyze the topic: 'AI Regulation in EU'")
 
 ---
 
-## 13. API Overview
+## 14. API Overview
 
 ### Public Endpoints (No Auth)
 - `GET /api/v1/health` — Health check
@@ -507,7 +535,7 @@ result = await team.run(task="Analyze the topic: 'AI Regulation in EU'")
 
 ---
 
-## 14. UI/UX Requirements
+## 15. UI/UX Requirements
 
 ### Design Principles
 1. **Clean & Professional** — News-grade design quality (think Reuters meets modern SaaS)
@@ -546,7 +574,7 @@ Every AI-generated content block must display:
 
 ---
 
-## 15. Scalability & Availability
+## 16. Scalability & Availability
 
 ### Horizontal Scaling Strategy
 ```
@@ -593,7 +621,7 @@ User ──→ Load Balancer ──→ API Server Pool (3+)
 
 ---
 
-## 16. Security Considerations
+## 17. Security Considerations
 
 | Threat | Mitigation |
 |--------|------------|
@@ -610,7 +638,7 @@ User ──→ Load Balancer ──→ API Server Pool (3+)
 
 ---
 
-## 17. Success Metrics
+## 18. Success Metrics
 
 | Metric | Target (6 Months) |
 |--------|-------------------|
@@ -625,7 +653,7 @@ User ──→ Load Balancer ──→ API Server Pool (3+)
 
 ---
 
-## 18. Release Plan
+## 19. Release Plan
 
 ### Phase 1: MVP (Week 1-4) — Hackathon + Polish
 - User auth (email + Google OAuth)
